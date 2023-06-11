@@ -1,0 +1,115 @@
+@mixin reset
+    *
+        padding: 0
+        margin: 0
+        box-sizing: border-box
+        font-family: 'Lato', sans-serif
+        text-decoration: none
+        list-style: none
+
+    html, body
+        height: 100%
+
+@mixin between
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+@mixin center
+    display: flex
+    justify-content: center
+    align-items: center
+
+@mixin btn-nav
+    padding: 5px 20px
+    font-size: 1.1rem
+    border-radius: 5px
+
+@mixin work-card-background
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    &:hover
+        .cover
+            opacity: 1
+            visibility: visible
+
+@mixin mobile-930
+    @media screen and (max-width: 930px)
+        footer .footer-container
+            display: block
+
+            .footer-about
+                width: 60%
+                margin-bottom: 30px
+
+            .footer-links
+                justify-content: space-between
+
+                ul
+                    margin: 20px 15px 20px 0
+
+@mixin mobile-768
+    @media screen and (max-width: 768px)
+        section.cta
+            h2
+                font-size: 2rem
+
+            h1
+                font-size: 2.5rem
+
+        nav.menu-desktop ul
+            display: none !important
+
+        nav.menu-desktop i.fa-bars
+            display: block !important
+
+        .works .work-list .work-one
+            width: 100%
+            max-width: 400px
+            height: 190px
+            margin-bottom: 20px
+
+        .works .work-list .work-others
+            justify-content: center
+
+            .work-card
+                min-width: 400px
+                margin: 20px 0 0 20px 10px
+
+@mixin mobile-448
+    @media screen and (max-width: 448px)
+        section.cta
+            text-align: center
+
+            h2
+                font-size: 1.5rem
+
+            h1
+                padding: 0 20px
+                font-size: 1.7rem
+
+            a
+                padding: 10px 20px
+                font-size: 1rem
+
+        .works .work-list .work-one
+            max-width: 270px
+
+        .works .work-list .work-others
+            .work-card
+                min-width: 270px
+                margin: 20px 0
+
+@mixin mobile-300
+    @media screen and (max-width: 300px)
+        .works .work-list .work-one
+            width: 100%
+            max-width: none
+
+        .works .work-list .work-others
+            width: 100%
+
+            .work-card
+                width: 100%
+                min-width: auto
